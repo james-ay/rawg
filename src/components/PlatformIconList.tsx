@@ -34,7 +34,6 @@ const PlatformIconList = ({ platforms }: Props) => {
     <>
       <HStack marginY={1}>
         {" "}
-        //theme.space
         {platforms.map((platform) => (
           <Icon
             key={platform.id}
