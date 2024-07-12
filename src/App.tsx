@@ -13,6 +13,7 @@ import { HStack } from "@chakra-ui/react";
 export interface GameQuery {
   genre: Genre | null;
   platform: ParentPlatform | null;
+  sort: string;
 }
 
 function App() {
@@ -52,7 +53,10 @@ function App() {
                 setGameQuery({ ...gameQuery, platform })
               }
             />
-            <SortSelector />
+            <SortSelector
+              sortOrder={gameQuery.sort}
+              onSelectSortOrder={(sort) => setGameQuery({ ...gameQuery, sort })}
+            />
           </HStack>
           <GameGrid gameQuery={gameQuery} />
         </GridItem>

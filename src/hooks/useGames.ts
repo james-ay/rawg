@@ -20,7 +20,7 @@ export interface FetchGamesResponse {
 }
 
 const useGames = (
-  gameQuery: GameQuery | null
+  gameQuery: GameQuery
   // selectedGenre: Genre | null,
   // selectedPlatform: Platform | null
 ) =>
@@ -30,9 +30,10 @@ const useGames = (
       params: {
         genres: gameQuery?.genre?.id,
         parent_platforms: gameQuery?.platform?.id,
+        ordering: gameQuery.sort,
       },
     },
-    [gameQuery?.genre?.id, gameQuery?.platform?.id]
+    [gameQuery]
   );
 
 //   {

@@ -7,7 +7,7 @@ import { Genre } from "../hooks/useGenres";
 import { GameQuery } from "../App";
 
 interface Props {
-  gameQuery: GameQuery | null;
+  gameQuery: GameQuery;
   // selectedGenre: Genre | null;
   // selectedPlatform: Platform | null;
 }
