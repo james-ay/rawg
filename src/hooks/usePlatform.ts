@@ -1,4 +1,3 @@
-import useData from "./useData";
 import platform from "../data/platform";
 
 export interface Platform {
@@ -16,6 +15,7 @@ export interface ParentPlatform {
   id: number;
   name: string;
   slug: string;
+  image_backgroud: string;
   platforms: Platform[];
 }
 
